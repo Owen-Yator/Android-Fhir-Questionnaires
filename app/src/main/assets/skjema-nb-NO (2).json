@@ -1,0 +1,183 @@
+{
+  "resourceType": "Questionnaire",
+  "language": "nb-NO",
+  "status": "draft",
+  "publisher": "NHN",
+  "meta": {
+    "profile": [
+      "http://ehelse.no/fhir/StructureDefinition/sdf-Questionnaire"
+    ],
+    "tag": [
+      {
+        "system": "urn:ietf:bcp:47",
+        "code": "nb-NO",
+        "display": "Bokmål"
+      }
+    ],
+    "security": [
+      {
+        "code": "3",
+        "display": "Helsehjelp (Full)",
+        "system": "urn:oid:2.16.578.1.12.4.1.1.7618"
+      }
+    ]
+  },
+  "contact": [
+    {
+      "name": "http://www.nhn.no"
+    }
+  ],
+  "subjectType": [
+    "Patient"
+  ],
+  "extension": [
+    {
+      "url": "http://helsenorge.no/fhir/StructureDefinition/sdf-sidebar",
+      "valueCoding": {
+        "system": "http://helsenorge.no/fhir/ValueSet/sdf-sidebar",
+        "code": "1"
+      }
+    },
+    {
+      "url": "http://helsenorge.no/fhir/StructureDefinition/sdf-information-message",
+      "valueCoding": {
+        "system": "http://helsenorge.no/fhir/ValueSet/sdf-information-message",
+        "code": "1"
+      }
+    },
+    {
+      "url": "http://helsenorge.no/fhir/StructureDefintion/sdf-itemControl-visibility",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://helsenorge.no/fhir/CodeSystem/AttachmentRenderOptions",
+            "code": "hide-help",
+            "display": "Hide help texts"
+          },
+          {
+            "system": "http://helsenorge.no/fhir/CodeSystem/AttachmentRenderOptions",
+            "code": "hide-sublabel",
+            "display": "Hide sublabel texts"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "919061d0-aa95-4a3f-8ef6-dabfb825ff04",
+  "item": [
+    {
+      "linkId": "91b393ad-68e2-4fc5-9b2d-058a9bd210ad",
+      "type": "group",
+      "text": "COVID-19 FORM",
+      "item": [
+        {
+          "linkId": "ecf56e5f-1f27-4e42-87e4-e82cc3f61820",
+          "type": "string",
+          "text": "First Name",
+          "required": false
+        },
+        {
+          "linkId": "8ba74093-1581-41be-8a5f-451a038179ed",
+          "type": "string",
+          "text": "Middle Name",
+          "required": false
+        },
+        {
+          "linkId": "f1544fc1-b05b-451f-8d8f-b63430422e1e",
+          "type": "string",
+          "text": "Last Name",
+          "required": false
+        },
+        {
+          "linkId": "4b96b880-fb51-427b-a8d4-bb1e55528a40",
+          "type": "string",
+          "text": "Age",
+          "required": false
+        },
+        {
+          "linkId": "16d35877-bfe9-496e-8c69-4b561bd2dd76",
+          "type": "choice",
+          "text": "Gender",
+          "required": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "id": "13b6e729-0acc-4e1c-a14b-73c9d075aa13",
+                "code": "male",
+                "system": "urn:uuid:177ce379-da03-4c9d-9393-b5e28cbad8b0",
+                "display": "Male"
+              }
+            },
+            {
+              "valueCoding": {
+                "id": "91266a5c-d92c-463f-9781-7c337b8aa60b",
+                "code": "female",
+                "system": "urn:uuid:177ce379-da03-4c9d-9393-b5e28cbad8b0",
+                "display": "Female"
+              }
+            },
+            {
+              "valueCoding": {
+                "id": "c696caa6-c32a-45ea-9b42-487b1e3fb800",
+                "code": "other",
+                "system": "urn:uuid:177ce379-da03-4c9d-9393-b5e28cbad8b0",
+                "display": "Other"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "e4beb9ca-17d7-4209-9293-f63f1be1a3b5",
+          "type": "date",
+          "text": "Date of Birth",
+          "required": false
+        },
+        {
+          "linkId": "20ed44ac-7f35-488b-a495-ee8ca374f9d0",
+          "type": "choice",
+          "text": "Type Of Vaccination",
+          "required": false,
+          "answerOption": [
+            {
+              "valueCoding": {
+                "id": "2ce459d3-c319-48db-bcb8-f1e979550bba",
+                "code": "astrezeneca",
+                "system": "urn:uuid:f9ccba6a-6b2f-41c4-8b99-7ddce45794ba",
+                "display": "Astrezeneca"
+              }
+            },
+            {
+              "valueCoding": {
+                "id": "161cb02e-9409-4082-8f31-2842e9c20dbd",
+                "code": "sputnicvaccines",
+                "system": "urn:uuid:f9ccba6a-6b2f-41c4-8b99-7ddce45794ba",
+                "display": "SputnicVaccines"
+              }
+            },
+            {
+              "valueCoding": {
+                "id": "a850dd29-a2c9-426c-864b-7f5b8c1bec05",
+                "code": "johnson-and-johnson",
+                "system": "urn:uuid:f9ccba6a-6b2f-41c4-8b99-7ddce45794ba",
+                "display": "Johnson and Johnson"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "35b61268-19a0-4c09-b548-6ba7e4c96341",
+          "type": "string",
+          "text": "Any Adverse Effects",
+          "required": false
+        },
+        {
+          "linkId": "0b2bd738-2e13-451e-8460-0e5dba1d562c",
+          "type": "string",
+          "text": "Refferal Hospital",
+          "required": false
+        }
+      ],
+      "required": false
+    }
+  ]
+}
